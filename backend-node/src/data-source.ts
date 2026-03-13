@@ -25,7 +25,7 @@ const getDatabaseConfig = () => {
 
 export const AppDataSource = new DataSource({
     ...getDatabaseConfig(),
-    entities: [join(__dirname, '/**/*.entity.js')],
+    entities: [__dirname + '/**/*.entity.js'],
     migrations: [join(__dirname, '/../migrations/**/*.js')],
     synchronize: true,
     logging: process.env.NODE_ENV === 'development',
