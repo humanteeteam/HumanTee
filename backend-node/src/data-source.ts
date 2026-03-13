@@ -27,7 +27,7 @@ export const AppDataSource = new DataSource({
     ...getDatabaseConfig(),
     entities: [join(__dirname, '/**/*.entity{.ts,.js}')],
     migrations: [join(__dirname, '/../migrations/**/*{.ts,.js}')],
-    synchronize: false, // Disabled to use migrations instead
+    synchronize: true, // Disabled to use migrations instead
     logging: process.env.NODE_ENV === 'development',
     // PERFORMANCE: Connection pooling
     extra: {
